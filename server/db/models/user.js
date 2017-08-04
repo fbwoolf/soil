@@ -21,6 +21,14 @@ const User = db.define('user', {
   googleId: {
     type: Sequelize.STRING
   }
+}, {
+  scopes: {
+    populated: () => ({
+      include: [{
+        model: db.model('plant')
+      }]
+    })
+  }
 })
 
 module.exports = User
