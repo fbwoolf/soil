@@ -1,7 +1,7 @@
 {
   "name": "soil",
   "version": "1.0.0",
-  "description": "uses a moisture sensor to provide you with soil data",
+  "description": "let's read some soil data!",
   "engines": {
     "node": ">= 7.0.0"
   },
@@ -15,7 +15,7 @@
     "start-server": "NODE_ENV='development' nodemon server -e html,js,scss --ignore public",
     "test": "NODE_ENV='test' DATABASE_URL='postgres://localhost:5432/soil-test' mocha ./**/*.spec.js --compilers js:babel-register"
   },
-  "author": "",
+  "author": "fara-woolf",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.15.3",
@@ -24,6 +24,7 @@
     "express": "^4.14.1",
     "express-session": "^1.15.1",
     "history": "^4.6.3",
+    "johnny-five": "^0.11.3",
     "morgan": "^1.8.1",
     "passport": "^0.3.2",
     "passport-google-oauth": "^1.0.0",
@@ -39,7 +40,9 @@
     "redux-logger": "^2.8.1",
     "redux-thunk": "^2.2.0",
     "sequelize": "^4.3.1",
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.0.3",
+    "styled-components": "^2.1.2",
+    "tessel-io": "^1.0.1"
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.9.0",
@@ -67,5 +70,9 @@
     "style-loader": "^0.13.1",
     "supertest": "^3.0.0",
     "webpack": "^2.2.1"
-  }
+  },
+  "repository": "https://github.com/fbwoolf/soil.git",
+  "keywords": [
+    "Tessel"
+  ]
 }
