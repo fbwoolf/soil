@@ -2,7 +2,7 @@ const router = require('express').Router()
 const {User} = require('../db/models')
 module.exports = router
 
-const attributesToReturn = {attributes: ['id', 'name', 'email']}
+const attributesToReturn = {attributes: ['id', 'username', 'email']}
 
 router.param('userId', (req, res, next, id) => {
   User.findById(id)

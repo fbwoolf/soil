@@ -5,7 +5,7 @@ import {Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import history from './history'
 import {Main, Login, Signup, UserHome} from './components'
-import {me} from './store'
+import {me, fetchUsers, fetchSpecies, fetchSoils, fetchPlants} from './store'
 
 /**
  * COMPONENT
@@ -56,6 +56,10 @@ const mapDispatch = (dispatch) => {
   return {
     loadInitialData () {
       dispatch(me())
+      dispatch(fetchUsers())
+      dispatch(fetchSpecies())
+      dispatch(fetchSoils())
+      dispatch(fetchPlants())
     }
   }
 }

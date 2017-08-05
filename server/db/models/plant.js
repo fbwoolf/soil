@@ -6,6 +6,11 @@ const Plant = db.define('plant', {
     type: Sequelize.STRING,
     allowNull: false
   },
+  image: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    defaultValue: '/image/rosemary.jpg'
+  },
   location: {
     type: Sequelize.STRING,
     allowNull: false

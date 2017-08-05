@@ -1,19 +1,25 @@
+'use strict'
+
 const crypto = require('crypto')
 const Sequelize = require('sequelize')
 const db = require('../db')
 
 const User = db.define('user', {
-  name: {
+  username: {
     type: Sequelize.STRING,
     allowNull: false
   },
   email: {
     type: Sequelize.STRING,
     unique: true,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      isEmail: true
+    }
   },
   password: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    allowNull: false
   },
   salt: {
     type: Sequelize.STRING

@@ -2,32 +2,32 @@ import React from 'react'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 import {auth} from '../../store'
-import Auth from './Auth'
+import Autho from './Autho'
 import Button from '../Navigation/Button'
 
 /**
  * COMPONENT
  */
-const AuthContainer = (props) => {
+const AuthoContainer = (props) => {
   const {name, displayName, handleSubmit, error} = props
 
   return (
-    <Auth>
+    <Autho>
       <div className='auth-header'>
-        <h1>{name}</h1>
+        <h1>{displayName}</h1>
       </div>
       <form onSubmit={handleSubmit} name={name}>
         {
           (name === 'signup') &&
           <div>
-            <input name='name' type='text' />
+            <input name='username' type='text' placeholder='Name' />
           </div>
         }
         <div>
-          <input name='email' type='text' />
+          <input name='email' type='text' placeholder='Email' />
         </div>
         <div>
-          <input name='password' type='password' />
+          <input name='password' type='password' placeholder='Password' />
         </div>
         <div>
           <Button type='submit'>{displayName}</Button>
@@ -35,7 +35,7 @@ const AuthContainer = (props) => {
         {error && error.response && <div> {error.response.data} </div>}
       </form>
       <a href='/auth/google'>{displayName} with Google</a>
-    </Auth>
+    </Autho>
   )
 }
 
@@ -48,7 +48,7 @@ const AuthContainer = (props) => {
  */
 const mapLogin = (state) => {
   return {
-    name: 'Login',
+    name: 'login',
     displayName: 'Login',
     error: state.currentUser.error
   }
@@ -56,8 +56,8 @@ const mapLogin = (state) => {
 
 const mapSignup = (state) => {
   return {
-    name: 'Signup',
-    displayName: 'Sign Up',
+    name: 'signup',
+    displayName: 'Signup',
     error: state.currentUser.error
   }
 }
@@ -67,22 +67,22 @@ const mapDispatch = (dispatch) => {
     handleSubmit (evt) {
       evt.preventDefault()
       const formName = evt.target.name
-      let name = null
-      if (formName === 'signup') name = evt.target.name.value
+      let username = null
+      if (formName === 'signup') username = evt.target.username.value
       const email = evt.target.email.value
       const password = evt.target.password.value
-      dispatch(auth(name, email, password, formName))
+      dispatch(auth(username, email, password, formName))
     }
   }
 }
 
-export const Login = connect(mapLogin, mapDispatch)(AuthContainer)
-export const Signup = connect(mapSignup, mapDispatch)(AuthContainer)
+export const Login = connect(mapLogin, mapDispatch)(AuthoContainer)
+export const Signup = connect(mapSignup, mapDispatch)(AuthoContainer)
 
 /**
  * PROP TYPES
  */
-AuthContainer.propTypes = {
+AuthoContainer.propTypes = {
   name: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
   handleSubmit: PropTypes.func.isRequired,

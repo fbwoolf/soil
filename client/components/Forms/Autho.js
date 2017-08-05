@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import styled from 'styled-components'
 
-const Auth = styled.section`
+const Autho = styled.section`
   {
     background: ${props => props.theme.lightgrey};
     color: ${props => props.theme.white};
@@ -53,4 +53,4 @@ const Auth = styled.section`
     }
   }
 `
-export default Auth
+export default Autho
