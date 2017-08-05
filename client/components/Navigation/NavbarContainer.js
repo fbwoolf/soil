@@ -45,7 +45,7 @@ class NavbarContainer extends Component {
           <NavLink to='/signup' activeClassName='active'>Signup</NavLink>
         </li>
         <li>
-          <NavLink to='/login' activeClassName='active'>login</NavLink>
+          <NavLink to='/login' activeClassName='active'>Login</NavLink>
         </li>
       </ul>
     )

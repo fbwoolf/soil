@@ -1,39 +1,41 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
-import {auth} from '../store'
+import {auth} from '../../store'
+import Auth from './Auth'
+import Button from '../Navigation/Button'
 
 /**
  * COMPONENT
  */
-const AuthForm = (props) => {
+const AuthContainer = (props) => {
   const {name, displayName, handleSubmit, error} = props
 
   return (
-    <div>
+    <Auth>
+      <div className='auth-header'>
+        <h1>{name}</h1>
+      </div>
       <form onSubmit={handleSubmit} name={name}>
         {
           (name === 'signup') &&
-          <div className='form-group'>
-            <label htmlFor='name'><small>Name</small></label>
-            <input name='name' type='text' className='form-control' id='form-field' />
+          <div>
+            <input name='name' type='text' />
           </div>
         }
         <div>
-          <label htmlFor='email'><small>Email</small></label>
           <input name='email' type='text' />
         </div>
         <div>
-          <label htmlFor='password'><small>Password</small></label>
           <input name='password' type='password' />
         </div>
         <div>
-          <button type='submit'>{displayName}</button>
+          <Button type='submit'>{displayName}</Button>
         </div>
         {error && error.response && <div> {error.response.data} </div>}
       </form>
       <a href='/auth/google'>{displayName} with Google</a>
-    </div>
+    </Auth>
   )
 }
 
@@ -46,7 +48,7 @@ const AuthForm = (props) => {
  */
 const mapLogin = (state) => {
   return {
-    name: 'login',
+    name: 'Login',
     displayName: 'Login',
     error: state.currentUser.error
   }
@@ -54,7 +56,7 @@ const mapLogin = (state) => {
 
 const mapSignup = (state) => {
   return {
-    name: 'signup',
+    name: 'Signup',
     displayName: 'Sign Up',
     error: state.currentUser.error
   }
@@ -74,13 +76,13 @@ const mapDispatch = (dispatch) => {
   }
 }
 
-export const Login = connect(mapLogin, mapDispatch)(AuthForm)
-export const Signup = connect(mapSignup, mapDispatch)(AuthForm)
+export const Login = connect(mapLogin, mapDispatch)(AuthContainer)
+export const Signup = connect(mapSignup, mapDispatch)(AuthContainer)
 
 /**
  * PROP TYPES
  */
-AuthForm.propTypes = {
+AuthContainer.propTypes = {
   name: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
   handleSubmit: PropTypes.func.isRequired,
