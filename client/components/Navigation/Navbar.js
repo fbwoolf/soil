@@ -25,6 +25,36 @@ const Navbar = styled.section`
         margin-right: 1rem;
       }
     }
+
+    ul {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      top: 0px;
+      right: 0px;
+      list-style: none;
+
+      li {
+        height: 60px;
+        float: left;
+      }
+
+      li a {
+        height: 100%;
+        width: auto;
+        display: block;
+        color: ${props => props.theme.white};
+        text-align: center;
+        text-decoration: none;
+        padding: 20px;
+      }
+
+      li a:hover, .active {
+        background: ${props => props.theme.greenhover};
+        color: ${props => props.theme.darkgrey};  
+      }
+    }
   }
 `
 export default Navbar

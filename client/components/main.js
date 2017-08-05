@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
-import Navbar from './Navigation/Navbar'
+import NavbarContainer from './Navigation/NavbarContainer'
 import Sidebar from './Navigation/Sidebar'
 
 /**
@@ -16,7 +16,7 @@ const Main = (props) => {
 
   return (
     <div id='main'>
-      <Navbar />
+      <NavbarContainer />
       <Sidebar>
         <div className='sidebar-header'>
           <h1>Soil</h1>
