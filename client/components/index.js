@@ -4,5 +4,5 @@
  * having to figure out which file they belong to!
  */
 export {default as Main} from './Main'
-export {default as UserHome} from './User/UserHome'
+export {default as UserDetail} from './User/UserDetail'
 export {Login, Signup} from './Forms/AuthoContainer'

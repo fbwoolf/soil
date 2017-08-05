@@ -9,6 +9,7 @@
   "scripts": {
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
+    "seed": "node seed",
     "deploy": "bash deploy.sh",
     "start": "node server",
     "start-dev": "npm run build-client-watch & npm run start-server",
@@ -19,12 +20,14 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.15.3",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.16.1",
     "connect-session-sequelize": "^4.1.0",
     "express": "^4.14.1",
     "express-session": "^1.15.1",
     "history": "^4.6.3",
     "johnny-five": "^0.11.3",
+    "lodash": "^4.17.4",
     "morgan": "^1.8.1",
     "passport": "^0.3.2",
     "passport-google-oauth": "^1.0.0",

@@ -13,19 +13,6 @@ const Navbar = styled.section`
     display: flex;
     align-items: center;
 
-    h3 {
-      margin: 0 0 0 240px;
-      flex: 1 1 auto;
-    }
-
-    form {
-      margin: 0 10px 0 0;
-
-      label {
-        margin-right: 1rem;
-      }
-    }
-
     ul {
       position: absolute;
       margin: 0;

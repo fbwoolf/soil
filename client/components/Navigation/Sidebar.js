@@ -15,18 +15,14 @@ const Sidebar = styled.section`
       height: 60px;
       color: ${props => props.theme.green};
       border-bottom: 1px solid ${props => props.theme.lightgrey};
+    }
 
-      h1 {
-        font-weight: normal;
-        display: flex;
-        align-items: center;
-        padding: 16px;
-        margin: 0;
-      }
-
-      div {
-        margin-right: 10px;
-      }
+    h1 {
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      margin: 0;
     }
 
     h5 {

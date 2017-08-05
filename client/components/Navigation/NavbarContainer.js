@@ -27,14 +27,18 @@ class NavbarContainer extends Component {
 
   renderLoggedIn () {
     return (
-      <ul>
-        <li>
-          <NavLink to='/home' activeClassName='active'>Home</NavLink>
-        </li>
-        <li>
-          <NavLink to='/login' onClick={this.props.handleClick} activeClassName='active'>Logout</NavLink>
-        </li>
-      </ul>
+      <div>
+        <h1>{this.props.currentUser.username}</h1>
+
+        <ul>
+          <li>
+            <NavLink to='/home' activeClassName='active'>Home</NavLink>
+          </li>
+          <li>
+            <NavLink to='/login' onClick={this.props.handleClick} activeClassName='active'>Logout</NavLink>
+          </li>
+        </ul>
+      </div>
     )
   }
 

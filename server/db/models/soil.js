@@ -7,12 +7,10 @@ const Soil = db.define('soil', {
     allowNull: false
   },
   dry: {
-    type: Sequelize.INTEGER,
-    allowNull: false
+    type: Sequelize.INTEGER
   },
   wet: {
-    type: Sequelize.INTEGER,
-    allowNull: false
+    type: Sequelize.INTEGER
   }
 })
 
