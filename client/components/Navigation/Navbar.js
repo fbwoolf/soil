@@ -25,22 +25,27 @@ const Navbar = styled.section`
       li {
         height: 60px;
         float: left;
-      }
 
-      li a {
-        height: 100%;
-        width: auto;
-        display: block;
-        color: ${props => props.theme.white};
-        text-align: center;
-        text-decoration: none;
-        padding: 20px;
-      }
+        a {
+          height: 100%;
+          width: auto;
+          display: block;
+          color: ${props => props.theme.white};
+          text-align: center;
+          text-decoration: none;
+          padding: 20px;
 
-      li a:hover, .active {
-        background: ${props => props.theme.greenhover};
-        color: ${props => props.theme.darkgrey};  
-      }
+          &:hover, &:focus {
+            background: ${props => props.theme.greenhover};
+            color: ${props => props.theme.darkgrey};  
+          }
+
+          &:active {
+            background: ${props => props.theme.greenhover};
+            color: ${props => props.theme.darkgrey};  
+          }
+        } 
+      } 
     }
   }
 `

@@ -5,4 +5,5 @@
  */
 export {default as Main} from './Main'
 export {default as UserDetail} from './User/UserDetail'
+export {default as PlantDetail} from './Plant/PlantDetail'
 export {Login, Signup} from './Forms/AuthoContainer'

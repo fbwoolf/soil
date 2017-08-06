@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {logout} from '../../store'
 import Sidebar from './Sidebar'
+import PlantList from '../Plant/PlantList'
 
 /* -----------------    COMPONENT     ------------------ */
 
@@ -31,6 +32,7 @@ class SidebarContainer extends Component {
     return (
       <div>
         <h1>{this.props.currentUser.username}</h1>
+        <PlantList />
       </div>
     )
   }

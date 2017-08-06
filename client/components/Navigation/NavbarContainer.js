@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import {logout} from '../../store'
 import Navbar from './Navbar'
 
@@ -44,14 +44,16 @@ class NavbarContainer extends Component {
 
   renderLoggedOut () {
     return (
-      <ul>
-        <li>
-          <NavLink to='/signup' activeClassName='active'>Signup</NavLink>
-        </li>
-        <li>
-          <NavLink to='/login' activeClassName='active'>Login</NavLink>
-        </li>
-      </ul>
+      <div>
+        <ul>
+          <li>
+            <NavLink to='/signup' activeClassName='active'>Signup</NavLink>
+          </li>
+          <li>
+            <NavLink to='/login' activeClassName='active'>Login</NavLink>
+          </li>
+        </ul>
+      </div>
     )
   }
 }

@@ -30,6 +30,34 @@ const Sidebar = styled.section`
       text-transform: uppercase;
       margin-left: 16px;
     }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          color: ${props => props.theme.white};
+          text-decoration: none;
+          padding-left: 16px;
+          padding-top: 10px;
+          display: list-item;
+          height: 30px;
+
+          &:hover, &:focus {
+            color: ${props => props.theme.green};
+            background: ${props => props.theme.darkgreyhover};
+            text-decoration: none;
+          }
+
+          &.active {
+            color: ${props => props.theme.green};
+            background: ${props => props.theme.darkgreyhover};
+          }
+        }
+      }
+    }
   }
 `
 export default Sidebar
