@@ -12,7 +12,8 @@ import './socket'
 export const theme = {
   black: 'black',
   white: 'white',
-  lightgrey: '#3f4649',
+  lightgrey: '#585f62',
+  medgrey: '#3f4649',
   darkgrey: '#2d2f31',
   darkgreyhover: '#2c3835',
   green: '#23a86d',

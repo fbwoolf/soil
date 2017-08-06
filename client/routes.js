@@ -5,7 +5,7 @@ import {Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import history from './history'
 import {me, fetchUsers, fetchSpecies, fetchSoils, fetchPlants} from './store'
-import {Main, Login, Signup, UserDetail, PlantDetail} from './components'
+import {Main, Login, Signup, UserContainer, PlantContainer} from './components'
 
 /**
  * COMPONENT
@@ -23,10 +23,10 @@ class Routes extends Component {
         <Main>
           <Switch>
             {/* Routes placed here are available to all visitors */}
-            <Route path='/home' component={UserDetail} />
             <Route path='/login' component={Login} />
             <Route path='/signup' component={Signup} />
-            <Route path='/plants/:id' component={PlantDetail} />
+            <Route path='/home' component={UserContainer} />
+            <Route path='/plants/:id' component={PlantContainer} />
             {
               isLoggedIn &&
                 <Switch>
@@ -34,7 +34,7 @@ class Routes extends Component {
                 </Switch>
             }
             {/* Displays our Login component as a fallback */}
-            <Route component={Login} />
+            <Route component={UserContainer} />
           </Switch>
         </Main>
       </Router>

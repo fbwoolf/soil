@@ -4,6 +4,6 @@
  * having to figure out which file they belong to!
  */
 export {default as Main} from './Main'
-export {default as UserDetail} from './User/UserDetail'
-export {default as PlantDetail} from './Plant/PlantDetail'
+export {default as UserContainer} from './User/UserContainer'
+export {default as PlantContainer} from './Plant/PlantContainer'
 export {Login, Signup} from './Forms/AuthoContainer'

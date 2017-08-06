@@ -4,7 +4,7 @@ import User from './User'
 
 /* -----------------    COMPONENT     ------------------ */
 
-const UserDetail = (props) => {
+const UserContainer = (props) => {
   return (
     <User />
   )
@@ -20,4 +20,4 @@ const mapState = function (state) {
 }
 const mapDispatch = null
 
-export default connect(mapState, mapDispatch)(UserDetail)
+export default connect(mapState, mapDispatch)(UserContainer)

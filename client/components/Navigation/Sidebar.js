@@ -14,7 +14,7 @@ const Sidebar = styled.section`
       margin: 0;
       height: 60px;
       color: ${props => props.theme.green};
-      border-bottom: 1px solid ${props => props.theme.lightgrey};
+      border-bottom: 1px solid ${props => props.theme.medgrey};
     }
 
     h1 {
