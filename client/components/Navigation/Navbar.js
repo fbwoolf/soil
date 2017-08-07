@@ -40,7 +40,7 @@ const Navbar = styled.section`
             color: ${props => props.theme.darkgrey};  
           }
 
-          &:active {
+          .active {
             background: ${props => props.theme.greenhover};
             color: ${props => props.theme.darkgrey};  
           }

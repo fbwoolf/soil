@@ -51,7 +51,7 @@ const Sidebar = styled.section`
             text-decoration: none;
           }
 
-          &.active {
+          .active {
             color: ${props => props.theme.green};
             background: ${props => props.theme.darkgreyhover};
           }
